@@ -23,4 +23,5 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
         imgSource: imgSource
       });
   }
+  window.location.reload();
 });
