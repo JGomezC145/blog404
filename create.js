@@ -22,6 +22,6 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
         postContent: postContent,
         imgSource: imgSource
       });
+    window.location.reload();
   }
-  window.location.reload();
 });
