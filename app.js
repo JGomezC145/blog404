@@ -15,8 +15,10 @@ firebase.analytics();
 
 let postCollection = document.querySelector("#posts-collection");
 
+//variables
 const db = firebase.firestore();
-
+const storage = firebase.storage();
+var storageRef = storage.ref();
 
 //Create Post
 function createPost(title, time, content, imgsource, id, likes) {

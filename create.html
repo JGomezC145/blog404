@@ -79,13 +79,24 @@
             <div class="form-group">
               <label for="Img Source">Img Source</label>
               <input type="url" class="form-control" id="imgSource">
+
             </div>
-            <input
-              type="submit"
-              value="Post"
-              class="btn btn-primary"
-              id="submitBtn"
-            />
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button type="button" onclick="tete()" class="input-group-text" name="button">Upload</button>
+              </div>
+              <div class="custom-file">
+                <input type="file" onchange="getfile()" class="custom-file-input" id="requestpic" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="requestpic">Choose file</label>
+              </div>
+            </div>
+
+            <progress style="width:100%;" id="progresante" value="0" max="100">0%</progress>
+            <br>
+            <input type="submit" value="Post" class="btn btn-primary" id="submitBtn"/>
+            <input type="password" id="postpass" placeholder="Escribe la contraseña de posteo">
+            <button type="button" class="btn btn-success" name="button">Preview Card</button>
+            <!-- <button type="button" onclick="tete()" name="button">tete</button> -->
           </div>
         </div>
       </div>
@@ -93,10 +104,10 @@
     </main>
 
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
     <!-- Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
