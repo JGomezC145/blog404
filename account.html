@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div style="border: 1px solid #000;" class="center">
+      <div class="group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name">
+      </div><br><br>
+      <div class="group">
+        <label for="email">Email</label>
+        <input disabled type="text" id="email">
+      </div><br><br>
+      <button type="button" onclick="update()" name="button">Update</button>
+    </div>
+    <div style="border: 1px solid #000;" class="center">
+      <h2>Iniciar</h2>
+      <div class="group">
+        <label for="iniemail">Email</label>
+        <input type="text" id="iniemail">
+      </div><br><br>
+      <div class="group">
+        <label for="inipass">Password</label>
+        <input type="password" id="inipass">
+      </div><br><br>
+      <button type="button" onclick="iniciar()" name="button">Entrar</button>
+      <button type="button" onclick="cerrarsesi()" name="button">Salir</button>
+    </div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <!-- IDEA: xdxdxd -->
+    <script src="app.js"></script>
+    <!-- <script src="inises.js"></script> -->
+    <script src="account.js"></script>
+  </body>
+</html>

@@ -56,7 +56,16 @@
           <li class="nav-item">
             <button class="btn btn-success" data-toggle="modal" data-target="#nosepuede" tabindex="-1" aria-disabled="true">Create a new post</button>
           </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-success" data-toggle="modal" data-target="#iniciarses" tabindex="-1" aria-disabled="true">Log In</button>
+          </li>
+          <li class="nav-item">
+            <button onclick="cerrarsesi()" id="cerror" style="display: none;" class="btn btn-outline-warning">Log Out</button>
+          </li>
         </ul>
+        <div class="acs" id="accountdata" style="display: none;">
+          <h5 id="acname">Hola</h5>
+        </div>
         <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -91,7 +100,7 @@
         <hr />
       </div>
       <!-- /container -->
-      <footer class="container">
+      <footer class="container" id="footer">
         <p class="float-right"><a href="#">Back to top</a> &middot; <a target="_bank" href="https://github.com/JGomezC145/blog404">Go GitHub Repository (Just if you are develper)</a></p>
         <p>&copy; 2020 Page made with <code>&hearts;</code> by Jeremy Gomez. &middot; This page does not use manipulable cookies. </p>
       </footer>
@@ -119,9 +128,9 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-warning" name="button">Create account</button>
+            <button type="button" class="btn btn-outline-warning" style="display: none;" name="button">Create account</button>
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="iniciar()">Save changes</button>
           </div>
         </div>
       </div>
@@ -153,7 +162,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
     <!-- Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -173,6 +183,8 @@
     ></script>
 
     <script src="app.js"></script>
+    <script src="comments.js"></script>
+    <script src="inises.js"></script>
 
   </body>
 </html>

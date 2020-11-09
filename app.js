@@ -80,6 +80,28 @@ function createPost(title, time, content, imgsource, id, likes) {
   postCollection.appendChild(div);
 }
 
+firebase.auth().onAuthStateChanged(function(user) {
+if (user) {
+  // User is signed in.
+  var displayName = user.displayName;
+  var email = user.email;
+  var emailVerified = user.emailVerified;
+  var photoURL = user.photoURL;
+  var isAnonymous = user.isAnonymous;
+  var uid = user.uid;
+  var providerData = user.providerData;
+  console.log(email, displayName, photoURL, uid);
+  document.getElementById('acname').innerText = displayName;
+  document.getElementById('acname').title = email;
+  document.getElementById('accountdata').style = 'display: block;';
+  document.getElementById('cerror').style = 'display: block;';
+} else {
+  // User is signed out.
+  document.getElementById('cerror').style = 'display: none;';
+  document.getElementById('accountdata').style = 'display: none;';
+  // ...
+}
+});
 // Get Posts
 function getPosts() {
   db.collection("posts").orderBy("createdAt")
