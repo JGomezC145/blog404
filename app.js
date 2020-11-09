@@ -1,4 +1,5 @@
 // Firebase Config
+var uid;
 var firebaseConfig = {
     apiKey: "AIzaSyDH2P75Fb2zZG8eiFMnXbaIX3ORWQOZ8eg",
     authDomain: "s4lblog1.firebaseapp.com",
@@ -88,17 +89,23 @@ if (user) {
   var emailVerified = user.emailVerified;
   var photoURL = user.photoURL;
   var isAnonymous = user.isAnonymous;
-  var uid = user.uid;
+  uid = user.uid;
   var providerData = user.providerData;
   console.log(email, displayName, photoURL, uid);
   document.getElementById('acname').innerText = displayName;
   document.getElementById('acname').title = email;
   document.getElementById('accountdata').style = 'display: block;';
   document.getElementById('cerror').style = 'display: block;';
+  document.getElementById('iniciarsesss').style = 'display: none;';
+  if (uid === 'sJDYUXU9EbPr6KpeKvPPa4wugKk2') {
+    document.getElementById('realcreate').style = 'display: block;';
+  }
 } else {
   // User is signed out.
   document.getElementById('cerror').style = 'display: none;';
   document.getElementById('accountdata').style = 'display: none;';
+  document.getElementById('realcreate').style = 'display: none;';
+  document.getElementById('iniciarsesss').style = 'display: block;';
   // ...
 }
 });

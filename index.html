@@ -57,7 +57,10 @@
             <button class="btn btn-success" data-toggle="modal" data-target="#nosepuede" tabindex="-1" aria-disabled="true">Create a new post</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-success" data-toggle="modal" data-target="#iniciarses" tabindex="-1" aria-disabled="true">Log In</button>
+            <a href="create.html" id="realcreate" style="display: none;" class="btn btn-outline-primary">Create Post</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-success" id="iniciarsesss" data-toggle="modal" data-target="#iniciarses" tabindex="-1" aria-disabled="true">Log In</button>
           </li>
           <li class="nav-item">
             <button onclick="cerrarsesi()" id="cerror" style="display: none;" class="btn btn-outline-warning">Log Out</button>
@@ -128,7 +131,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-warning" style="display: none;" name="button">Create account</button>
+            <a href="createaccount.html" class="btn btn-outline-warning" style="display: block;">Create account</a>
             <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="iniciar()">Save changes</button>
           </div>
