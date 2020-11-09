@@ -82,7 +82,7 @@ function createPost(title, time, content, imgsource, id, likes) {
 
 // Get Posts
 function getPosts() {
-  db.collection("posts")
+  db.collection("posts").orderBy("createdAt")
     .get()
     .then(snapshot => {
       snapshot.docs.forEach(docs => {

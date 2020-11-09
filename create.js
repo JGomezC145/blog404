@@ -80,8 +80,11 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
           createdAt: postDate,
           postName: postTitle,
           postContent: postContent,
-          imgSource: imgSource
+          imgSource: imgSource,
+          likes: 0
         });
+      alert('Posted');
+      var setas = setTimeout(clearall(), 3000);
     }
   } else if (pass === '' || ' ') {
     alert('Type the password.');
@@ -89,3 +92,77 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
     alert('Wrong password.');
   }
 });
+
+function clearall() {
+  document.getElementById("author").value = '';
+  document.getElementById("postTitle").value = '';
+  document.getElementById("postContent").value = '';
+  document.getElementById("postDate").value = '';
+  document.getElementById("imgSource").value = '';
+  document.getElementById("postpass").value = '';
+}
+let previewzone = document.getElementById("prestados");
+function previer() {
+  previewzone.innerHTML = '';
+
+
+  var title = document.getElementById("postTitle").value;
+  var time = document.getElementById("postDate").value;
+  var content = document.getElementById("postContent").value;
+  var imgsource = document.getElementById("imgSource").value;
+  var likes = 0;
+
+
+  let div = document.createElement("div");
+  div.setAttribute("class", "col-md-4");
+  let yikes = document.createElement("div");
+  let card = document.createElement("div");
+  let cardbody = document.createElement("div");
+  card.setAttribute("class", "card")
+  cardbody.setAttribute("class", "card-body")
+  yikes.setAttribute("style", "display: flex; justify-content: right;");
+
+  let h2 = document.createElement("h2");
+  let p = document.createElement("p");
+  let small = document.createElement("small");
+  let img = document.createElement("img");
+  let likescounter = document.createElement("p");
+  let heart = document.createElement("i")
+  heart.setAttribute("class", "bx bxs-heart")
+  heart.setAttribute("style", "margin-top: 5px; margin-right: 3px;")
+
+  img.setAttribute("class", "card-img-top");
+  h2.setAttribute("class", "card-title");
+  p.setAttribute("class", "card-text");
+  small.setAttribute("class", "card-subtitle mb-2 text-muted");
+
+  img.src = imgsource;
+  h2.textContent = title;
+  small.textContent = "Posted on: " + time;
+  p.textContent = content;
+  likescounter.textContent = likes;
+
+
+  yikes.appendChild(heart);
+  yikes.appendChild(likescounter);
+
+  cardbody.appendChild(h2);
+  cardbody.appendChild(small);
+  cardbody.appendChild(p);
+  cardbody.appendChild(yikes);
+
+  card.appendChild(img);
+  card.appendChild(cardbody)
+
+  div.appendChild(card);
+
+
+  // div.appendChild(img);
+  // div.appendChild(h2);
+  // div.appendChild(small);
+  // div.appendChild(p);
+  // div.appendChild(yikes);
+
+
+  previewzone.appendChild(div);
+}

@@ -31,12 +31,35 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">Create</a>
+            <a class="nav-link" href="<create class="htm"></create>l">Create</a>
           </li>
         </ul>
       </div>
     </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Qubit's blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.google.com/">Go to google</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-success" data-toggle="modal" data-target="#nosepuede" tabindex="-1" aria-disabled="true">Create a new post</button>
+          </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+    </nav>
     <main role="main">
       <!-- JUMBOTRON -->
       <div class="jumbotron">
@@ -45,6 +68,13 @@
           <p>
             This blog was created for the <span style="color: #0000ff;">#fourteendayschallenge</span>.
           </p>
+          <!-- Button trigger modal -->
+          <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#iniciarses">
+            Launch demo modal
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nosepuede">
+            piola
+          </button> -->
           <!-- <p>
             <a class="btn btn-primary btn-lg" href="#" role="button">Perder aun mas &raquo;</a>
           </p> -->
@@ -63,6 +93,57 @@
         <p>&copy; 2020 Page made with <code>&hearts;</code> by Jeremy Gomez. &middot; This page does not use manipulable cookies. </p>
       </footer>
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="iniciarses" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sing In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="singinemail">Email</label>
+                <input type="email" class="form-control" id="singinemail" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="singinpassword">Password</label>
+                <input type="password" class="form-control" id="singinpassword">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-warning" name="button">Create account</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="nosepuede" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Hmmm, it seems that you are not Qubit, the real one would be a little angry that you want to impersonate his identity :(.</p>
+            <p class="modal-text">If you think we are wrong and you are the real Qubit, send a message telling us.</p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" onclick="alert('Oh! What a shame! We cant get your message, we hope you dont get mad Qubit :(')">SendMessage</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
@@ -76,6 +157,7 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
