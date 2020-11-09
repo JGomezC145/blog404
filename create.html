@@ -13,32 +13,45 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Qubit's blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="create.html">Create</a>
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.google.com/">Go to google</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#articles">Articles Section</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-success" data-toggle="modal" data-target="#nosepuede" tabindex="-1" aria-disabled="true">Create a new post</button>
+          </li>
+          <li class="nav-item">
+            <a href="create.html" id="realcreate" style="display: none;" class="btn btn-outline-primary">Create Post</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-success" id="iniciarsesss" data-toggle="modal" data-target="#iniciarses" tabindex="-1" aria-disabled="true">Log In</button>
+          </li>
+          <li class="nav-item">
+            <button onclick="cerrarsesi()" id="cerror" style="display: none;" class="btn btn-outline-warning">Log Out</button>
           </li>
         </ul>
+        <div class="acs" id="accountdata" style="display: none;">
+          <h5 id="acname">Hola</h5>
+        </div>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
       </div>
     </nav>
-
     <main role="main">
       <div class="container">
         <div class="card m-4">
