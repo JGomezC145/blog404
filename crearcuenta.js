@@ -1,34 +1,38 @@
 // Codigo 1450
-//Made for JGomezC145
+//Made by JGomezC145
 
 
 function crearr() {
+  //variables
   var email = document.getElementById('emaill').value;
   var password =  document.getElementById('password12').value;
   var name = document.getElementById('naname').value;
+  //si todo esta bien
   if (email === '' || password === '' || name === '') {
     alert('Complete fields');
   } else {
+    //si no
     firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(
-      (user)=>{
-     // here you can use either the returned user object or       firebase.auth().currentUser. I will use the returned user object
-        if(user){
-          user.updateProfile({
-             displayName: name
-          })
-        }
-    })
     .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorMessage);
+      alert(errorMessage);
     });
   }
+  firebase.auth().onAuthStateChanged(function(user) {
+    user.updateProfile({
+      displayName: name
+  }).then(function() {
+    // Update successful.
+    alert('Done')
+  }).catch(function(error) {
+    console.log(error.message);
+  })
+  setTimeout ("redireccionar()", 3000);
+})};
 
-
-
-
-
+function redireccionar(){
+  window.locationf="index.html";
 }

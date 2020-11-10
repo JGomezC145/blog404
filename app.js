@@ -97,6 +97,11 @@ if (user) {
   document.getElementById('accountdata').style = 'display: block;';
   document.getElementById('cerror').style = 'display: block;';
   document.getElementById('iniciarsesss').style = 'display: none;';
+  if (displayName === '') {
+    document.getElementById('opaopa').style = 'display: block;';
+  } else {
+    document.getElementById('opaopa').style = 'display: none;';
+  }
   if (uid === 'sJDYUXU9EbPr6KpeKvPPa4wugKk2') {
     document.getElementById('realcreate').style = 'display: block;';
   }
